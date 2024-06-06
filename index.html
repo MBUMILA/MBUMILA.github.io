@@ -39,7 +39,7 @@
             document.getElementById('custom-form contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
+                emailjs.sendForm('contact_service', 'custom-form contact-form', this)
                     .then(() => {
                         console.log('SUCCESS!');
                     }, (error) => {
