@@ -23,6 +23,31 @@
         <link href="css/magnific-popup.css" rel="stylesheet">
 
         <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
+
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "Z7g9c0fh2jNzzBmaL",
+            });
+        })();
+    </script>
+
+         <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('custom-form contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
         
 <!--
 
@@ -513,6 +538,7 @@ mobile application for small and medium-sized businesses!. Feel free to get in t
         </footer>
 
         <!-- JAVASCRIPT FILES -->
+        
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.sticky.js"></script>
