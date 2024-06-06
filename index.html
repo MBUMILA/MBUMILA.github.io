@@ -37,7 +37,7 @@
 
          <script type="text/javascript">
         window.onload = function() {
-            document.getElementById('custom-form custom-form').addEventListener('submit', function(event) {
+            document.getElementsByClassName('custom-form custom-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
                 emailjs.sendForm('contact_service', 'contact-form custom-form', this)
